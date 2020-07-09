@@ -1,4 +1,10 @@
 site_name: RICOH THETA SC2 API Public Community Guide
+site_url: 
+site_description: Community tests on the RICOH THETA SC2 WiFi API
+repo_url: 
+repo_name: 
+site_author: Oppkey
+google_analytics: ['UA-73311422-1', 'auto']
 
 theme:
   name: material
@@ -8,3 +14,17 @@ theme:
     accent: 'lime'
   logo: images/logo-white.png
   favicon: images/logo-white.png
+  icon:
+    logo: assets/images/logo.png
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: 'https://github.com/theta360developers'
+    - icon: fontawesome/brands/twitter
+      link: 'https://twitter.com/theta360dev'
+    - icon: fontawesome/brands/facebook
+      link: 'https://www.facebook.com/theta360guide/'
+
+nav:
+  - Home: index.md
