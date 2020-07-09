@@ -1,0 +1,10 @@
+site_name: RICOH THETA SC2 API Public Community Guide
+
+theme:
+  name: material
+  custom_dir: 'theme'
+  palette:
+    primary: 'light green'
+    accent: 'lime'
+  logo: images/logo-white.png
+  favicon: images/logo-white.png
