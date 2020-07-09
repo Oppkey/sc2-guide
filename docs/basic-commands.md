@@ -1,10 +1,10 @@
-## Basic Commands
+# Basic Commands
 
 Use standard HTTP requests to communicate with the SC2.  Most of the commands are
 POST requests and require a script or an API testing tool. A few of the 
 commands are GET requests and can be tested with a browser.
 
-### info
+## info
 
 Check API Access with "info"
 Use the simplest possible API command first to make sure your workstation can talk to the camera with HTTP. Send a GET command to http://192.168.1.1/osc/info
@@ -26,7 +26,7 @@ Chrome displays colored highlighting in my browser because I am using the free e
 
 The rest of this tutorial will focus on POST commands.  You will need to use an API testing tool.
 
-### state
+## state
 
 The simplest POST command is 
 [state](https://api.ricoh/docs/theta-web-api-v2.1/protocols/state/). Make sure that you use POST and not GET. Note that the header should include `Content-Type: application/json`. You need the HTTP header for most of the THETA SC2 POST commands. It's a good practice to include it.
@@ -38,7 +38,7 @@ My battery is at 66%. I need to charge it.
 
 ![state response](images/basic-commands/state-response.png)
 
-### takePicture
+## takePicture
 
 Finally, we get to the exciting part of our journey. 
 We have a camera. Let's take a picture. It's time.  :-)
@@ -53,11 +53,11 @@ Closeup of the payload.
 
 ![takePicture request payload](images/basic-commands/takepicture-request-payload.png)
 
-#### Celebrate the Camera Chirp
+### Celebrate the Camera Chirp
 
 The camera will now chirp when the take picture command is run. Developers like the chirp because it's associated with a successful outcome of your program. In the future, you can trigger the picture with object recognition or external sensors. However, for now, take a moment to celebrate the chirp.
 
-#### Response from takePicture
+### Response from takePicture
 
 Disappointingly, we can't see the picture directly in the takePicture response. We're close, so just hang on for the next step. For now, pay attention to state value that you get in the response. Notice that it says, "inProgress."  This is important because you'll next need to check to make sure the camera has finished processing the image before you can download it.
 

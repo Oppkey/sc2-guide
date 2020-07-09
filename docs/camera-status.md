@@ -1,5 +1,5 @@
 
-## Check Camera Status Before Sending Next Command
+# Check Camera Status Before Sending Next Command
 
 The SC2 appears to take quite a bit longer to be ready for the next picture shoot. The V/Z1 is faster in my experience. When you write your own program you should verify that the camera
 is ready for the next command with `state` or `status`.
@@ -8,7 +8,7 @@ Although both `state` and `status` will work for
 `takePicture` in still image mode, you will need to 
 use `state` if you use more advanced shots that require `startCapture`.
 
-### Check camera availability with state
+## Check camera availability with state
 
 The flow of your program will be as follows:
 
@@ -38,9 +38,7 @@ The flow of your program will be as follows:
 
     <--- GET URL *URL = _LatestFileUrl of the state received immediately before
 
- 
-
-### Check camera availability with status
+## Check camera availability with status
 
 I used a network protocol analyzer log from both the RICOH mobile SDK and the official mobile app to see how these apps check for the readiness of the image to be download.  Both apps are using status. 
 
@@ -69,4 +67,3 @@ Put the check on the status in a loop with a delay in the loop to avoid overwhel
 Here's an example of putting a delay of 1 second into the loop.
 
 ![camera status loop](images/camera-status/status-loop.png)
-
