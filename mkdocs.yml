@@ -28,5 +28,6 @@ extra:
 
 nav:
   - Home: index.md
-  - Basic Commands: basic-commands.md
-  
+  - 'Basic Commands': basic-commands.md
+  - 'Camera Status': camera-status.md
+  - 'Save Image': save-image.md
