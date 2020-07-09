@@ -16,3 +16,13 @@ You can also run the GET command in your browser.
 You will see the response below.
 
 ![info response](images/basic-commands/info-response.png)
+
+This is a test using Google Chrome.
+
+![info Chrome](images/basic-commands/info-chrome.png)
+
+Chrome displays colored highlighting in my browser because I am using the free extension 
+[JSON Awesome](https://chrome.google.com/webstore/detail/json-viewer-awesome/iemadiahhbebdklepanmkjenfdebfpfe?hl=en).
+
+The rest of this tutorial will focus on POST commands.  You will need to use an API testing tool.
+
