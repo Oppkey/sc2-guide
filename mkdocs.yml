@@ -32,3 +32,4 @@ nav:
   - 'Camera Status': camera-status.md
   - 'Save Image': save-image.md
   - 'List Files': list-files.md
+  - 'Image Metadata': metadata.md
