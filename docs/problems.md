@@ -48,3 +48,11 @@ Pull the actual image to your mobile phone and then use a library
 to extract the metadata in the image on your mobile phone.  Do not
 use camera._getMetadata to pull the information if you suspect 
 it is not providing you with the correct values.
+
+## previewFormat width and height not working
+
+__Problem Description__: with getOptions, the `previewFormat` does 
+not show correct values.  `width` and `height` return 0.
+
+__Workaround__: There is no known workaround to set the width and 
+height, but getLivePreview does appear to work.
