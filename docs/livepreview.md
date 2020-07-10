@@ -6,7 +6,7 @@ the problem section of this document.
 
 ## Using getLivePreview in mobile apps
 
-We know that LiveView from the SC2 does work.
+We know that getLivePreview from the SC2 does work.
 On the official RICOH mobile app, there is a live preview of the scene before a picture is taken.
 
 ![official app](images/liveview/official-app.png)
