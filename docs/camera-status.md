@@ -67,3 +67,11 @@ Put the check on the status in a loop with a delay in the loop to avoid overwhel
 Here's an example of putting a delay of 1 second into the loop.
 
 ![camera status loop](images/camera-status/status-loop.png)
+
+## Checking Status of startCapture
+
+Community member timbit123 identified a problem using [/osc/commands/status](https://api.ricoh/docs/theta-web-api-v2.1/protocols/commands_status/) to check the completion of start capture.  
+
+See his post [here](https://community.theta360.guide/t/sc2-auto-bracket-options-not-ending/5651/2?u=craig).
+
+![startCapture status](images/camera-status/start-capture.png)

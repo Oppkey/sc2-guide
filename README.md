@@ -1,7 +1,19 @@
 # SC2 API Public Community Guide
 
-* uses MkDocs and Material MkDocs
+Uses MkDocs and Material MkDocs.  
 
+## Installation
+
+```bash
     $ pipenv install
+    $ pipenv install mkdocs
+    $ pipenv install mkdocs-material
+    $ pipenv install mkdocs-material-extensions
+    $ pipenv shell
     $ mkdocs serve
+```
 
+## References
+
+* https://github.com/facelessuser/mkdocs-material-extensions/
+* https://github.com/squidfunk/mkdocs-material/issues/1577
