@@ -61,7 +61,7 @@ If you have two network interfaces in your development workstation, make sure th
 ## Connection Limitations Compared to THETA V and Z1
 
 * SC2 only operates at 2.4GHz.  The V and Z1 can also connect at 5GHz
-* SC2 can only operation in Access Point (AP) mode.  The V and Z1 can also operate in Client Mode (CL)
+* SC2 can only operate in Access Point (AP) mode.  The V and Z1 can also operate in Client Mode (CL)
 
 You can use the official RICOH mobile app to check camera features.
 
