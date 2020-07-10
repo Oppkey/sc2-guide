@@ -34,4 +34,5 @@ nav:
   - 'List Files': list-files.md
   - 'Image Metadata': metadata.md
   - 'LiveView Stream': liveview.md
+  - 'SC2 API Problems': problems.md
   
