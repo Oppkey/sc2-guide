@@ -33,3 +33,5 @@ nav:
   - 'Save Image': save-image.md
   - 'List Files': list-files.md
   - 'Image Metadata': metadata.md
+  - 'LiveView Stream': liveview.md
+  
