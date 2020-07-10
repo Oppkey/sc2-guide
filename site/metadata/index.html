@@ -14,18 +14,18 @@
       
         <meta name="author" content="Oppkey">
       
-      <link rel="shortcut icon" href="images/logo-white.png">
+      <link rel="shortcut icon" href="../images/logo-white.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.3">
     
     
       
-        <title>RICOH THETA SC2 API Public Community Guide</title>
+        <title>Image Metadata - RICOH THETA SC2 API Public Community Guide</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.fe0cca5b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.fe0cca5b.min.css">
       
-        <link rel="stylesheet" href="assets/stylesheets/palette.a46bcfb3.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
       
       
         
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ricoh-theta-sc2-api" class="md-skip">
+        <a href="#image-metadata" class="md-skip">
           Skip to content
         </a>
       
@@ -77,9 +77,9 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="." title="RICOH THETA SC2 API Public Community Guide" class="md-header-nav__button md-logo" aria-label="RICOH THETA SC2 API Public Community Guide">
+    <a href=".." title="RICOH THETA SC2 API Public Community Guide" class="md-header-nav__button md-logo" aria-label="RICOH THETA SC2 API Public Community Guide">
       
-  <img src="images/logo-white.png" alt="logo">
+  <img src="../images/logo-white.png" alt="logo">
 
     </a>
     <label class="md-header-nav__button md-icon" for="__drawer">
@@ -93,7 +93,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Home
+              Image Metadata
             
           </span>
         </div>
@@ -150,15 +150,75 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="RICOH THETA SC2 API Public Community Guide" class="md-nav__button md-logo" aria-label="RICOH THETA SC2 API Public Community Guide">
+    <a href=".." title="RICOH THETA SC2 API Public Community Guide" class="md-nav__button md-logo" aria-label="RICOH THETA SC2 API Public Community Guide">
       
-  <img src="images/logo-white.png" alt="logo">
+  <img src="../images/logo-white.png" alt="logo">
 
     </a>
     RICOH THETA SC2 API Public Community Guide
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../basic-commands/" title="Basic Commands" class="md-nav__link">
+      Basic Commands
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../camera-status/" title="Camera Status" class="md-nav__link">
+      Camera Status
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../save-image/" title="Save Image" class="md-nav__link">
+      Save Image
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../list-files/" title="List Files" class="md-nav__link">
+      List Files
+    </a>
+  </li>
+
     
       
       
@@ -175,14 +235,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Home
+        Image Metadata
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="." title="Home" class="md-nav__link md-nav__link--active">
-      Home
+    <a href="./" title="Image Metadata" class="md-nav__link md-nav__link--active">
+      Image Metadata
     </a>
     
       
@@ -201,37 +261,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
+  <a href="#problems-with-sc2" class="md-nav__link">
+    Problems with SC2
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#http-api-testing-tools" class="md-nav__link">
-    HTTP API Testing Tools
+  <a href="#community-tests" class="md-nav__link">
+    Community Tests
+  </a>
+  
+    <nav class="md-nav" aria-label="Community Tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exposure-values-with-sc2" class="md-nav__link">
+    exposure values with SC2
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#connect-your-computer-to-the-sc2" class="md-nav__link">
-    Connect Your Computer to the SC2
+        
+          <li class="md-nav__item">
+  <a href="#exposure-values-with-theta-v" class="md-nav__link">
+    exposure values with THETA V
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting-connection" class="md-nav__link">
-    Troubleshooting Connection
+        
+          <li class="md-nav__item">
+  <a href="#exposure-values-with-theta-z1" class="md-nav__link">
+    exposure values with THETA Z1
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#connection-limitations-compared-to-theta-v-and-z1" class="md-nav__link">
-    Connection Limitations Compared to THETA V and Z1
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -248,67 +314,7 @@
 
 
   <li class="md-nav__item">
-    <a href="basic-commands/" title="Basic Commands" class="md-nav__link">
-      Basic Commands
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="camera-status/" title="Camera Status" class="md-nav__link">
-      Camera Status
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="save-image/" title="Save Image" class="md-nav__link">
-      Save Image
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="list-files/" title="List Files" class="md-nav__link">
-      List Files
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="metadata/" title="Image Metadata" class="md-nav__link">
-      Image Metadata
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="livepreview/" title="Livepreview Stream" class="md-nav__link">
+    <a href="../livepreview/" title="Livepreview Stream" class="md-nav__link">
       Livepreview Stream
     </a>
   </li>
@@ -320,7 +326,7 @@
 
 
   <li class="md-nav__item">
-    <a href="problems/" title="SC2 API Problems" class="md-nav__link">
+    <a href="../problems/" title="SC2 API Problems" class="md-nav__link">
       SC2 API Problems
     </a>
   </li>
@@ -352,37 +358,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
+  <a href="#problems-with-sc2" class="md-nav__link">
+    Problems with SC2
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#http-api-testing-tools" class="md-nav__link">
-    HTTP API Testing Tools
+  <a href="#community-tests" class="md-nav__link">
+    Community Tests
+  </a>
+  
+    <nav class="md-nav" aria-label="Community Tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exposure-values-with-sc2" class="md-nav__link">
+    exposure values with SC2
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#connect-your-computer-to-the-sc2" class="md-nav__link">
-    Connect Your Computer to the SC2
+        
+          <li class="md-nav__item">
+  <a href="#exposure-values-with-theta-v" class="md-nav__link">
+    exposure values with THETA V
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting-connection" class="md-nav__link">
-    Troubleshooting Connection
+        
+          <li class="md-nav__item">
+  <a href="#exposure-values-with-theta-z1" class="md-nav__link">
+    exposure values with THETA Z1
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#connection-limitations-compared-to-theta-v-and-z1" class="md-nav__link">
-    Connection Limitations Compared to THETA V and Z1
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -402,52 +414,72 @@
                   
                 
                 
-                <h1 id="ricoh-theta-sc2-api">RICOH THETA SC2 API</h1>
-<p>Build Android iOS mobile apps for the SC2 and connect 
-your mobile app to the camera with Wi-Fi using this API.</p>
-<p><img alt="header" src="images/overview/header.png" /></p>
-<h2 id="overview">Overview</h2>
-<p>The RICOH THETA SC2 is a great, lightweight camera that takes good-looking 360° pictures. Many people in the developer community have asked about building applications for the SC2. Although the SC2 camera appears to conform to the RICOH THETA Wi-Fi API, it is not listed on 
-<a href="https://api.ricoh/docs/theta-web-api-v2.1/">the official RICOH API site</a> which we all use as our reference. Some developers have <a href="https://community.theta360.guide/t/question-about-getlivepreview-by-thetasc2-on-android/5117">reported problems</a> with the SC2 and the 
-<a href="https://www2.theta360.guide/doc/article/3">RICOH THETA SDK</a> for features such as live preview. Other people have 
-<a href="https://community.theta360.guide/t/theta-sc2-crash-street-view-app/5288?u=craig">reported problems using the SC2 with the Google Streetview mobile app</a>.</p>
-<p>The SC2 uses a slower MCU than the RICOH THETA V and Z1.  The slower speed of the SC2 results in longer processing times for all API commands.  This can cause problems if you run multiple API commands in sequence and do not check for completion of each command.  There are extensive examples in this document and sample code that show how to use 
-<a href="https://api.ricoh/docs/theta-web-api-v2.1/protocols/commands_status/">POST /osc/commands/status</a> and <a href="https://api.ricoh/docs/theta-web-api-v2.1/protocols/state/">POST /osc/state</a> 
-to verify that your previous API command is finished processing.</p>
-<p>This article organizes usage of the SC2 Wi-Fi API based on community testing.  It is not an official RICOH 
-document. Please contact RICOH for official information.</p>
-<h2 id="http-api-testing-tools">HTTP API Testing Tools</h2>
-<p>I am using THETA SC2 firmware 1.20 on a Windows 10 machine using the free API testing tool 
-<a href="https://chrome.google.com/webstore/detail/talend-api-tester-free-ed/aejoelaoggembcahagimdiliamlcdmfm?hl=en">Talend API Tester</a>. This API testing tool is similar to 
-<a href="https://www.postman.com/">Postman</a>. Another command line alternative is 
-<a href="https://curl.haxx.se/">curl</a>. If you prefer to write scripts for your tests, I find it easy and effective to use <a href="https://requests.readthedocs.io/en/master/">Python requests</a> or any number of JavaScript libraries that can handle an HTTP request. This article makes extensive use of the Dart 
-<a href="https://pub.dev/packages/http">http package</a> for both GET and POST requests.</p>
-<p>Dart was chosen for many tests as it almost as easy to use as Bash or Python for command line scripts and provides a smooth and easy way to test mobile apps on iOS and Android with 
-<a href="https://flutter.dev/">Flutter</a>.</p>
-<h2 id="connect-your-computer-to-the-sc2">Connect Your Computer to the SC2</h2>
-<p>Turn the SC2 on and put it into Wi-Fi mode.</p>
-<p><img alt="Wi-Fi OLED" src="images/overview/wifi-oled.png" /></p>
-<p>You must connect your workstation to the SC2 with Wi-Fi. The hotspot password is the serial number (just the numerical digits). </p>
-<p>On Windows, click on the Wi-Fi icon in the lower-right of your screen. Select the THETAYP hotspot.  </p>
-<p><img alt="Windows Wi-Fi" src="images/overview/windows-wifi.png" /></p>
-<p>In this example, the password is 20001005. There are no letters or dots in the default password.</p>
-<p>Once connected, the Wi-Fi icon on the front of the SC2 will be solid. If the Wi-Fi icon is still flashing, the camera is not connected.</p>
-<h2 id="troubleshooting-connection">Troubleshooting Connection</h2>
-<p>The THETA SC2 Wi-Fi only functions at 2.4GHz. The THETA V and the Z1 operate at both 2.4GHz and 5GHz. If you have an unstable Wi-Fi connection with the SC, try a different Wi-Fi dongle or laptop to isolate the problem.</p>
-<p>If you are working with multiple devices, make sure you are connecting to the correct camera.  </p>
-<p>Put the camera right next to your development workstation. Moving the camera 5 feet away can make a difference.</p>
-<p>Turn off other Wi-Fi routers in the test area that may be causing Wi-Fi interference.</p>
-<p>If you have two network interfaces in your development workstation, make sure that your primary router is not at 192.168.1.1. The THETA SC2 will always be 192.168.1.1 in Access Point (AP) mode. </p>
-<h2 id="connection-limitations-compared-to-theta-v-and-z1">Connection Limitations Compared to THETA V and Z1</h2>
+                <h1 id="image-metadata">Image Metadata</h1>
+<p>At this stage, you may want to just download all the images and process all the images on the mobile device or in your cloud. </p>
+<p>You can grab the image metadata on your Android mobile phone with 
+<a href="https://developer.android.com/reference/android/media/ExifInterface">Android ExifInterface</a>.</p>
+<p>Most developers grab all the images and process the data on the device. 
+However, if there are hundreds or thousands of images on the camera, you may want to pull some data from images prior to processing.</p>
+<h2 id="problems-with-sc2">Problems with SC2</h2>
+<p>Unfortunately, <a href="https://api.ricoh/docs/theta-web-api-v2.1/commands/camera._get_metadata/">_getMetadata</a> does 
+not work correctly on the SC2 as of July 10, 2020.
+You should Run the test yourself for each property you want to use to make sure
+that the camera is providing your app with the correct data.</p>
+<p>Request</p>
+<p><img alt="metadata request" src="../images/metadata/metadata-request.png" /></p>
+<p>Response</p>
+<p><img alt="metadata response" src="../images/metadata/metadata-response.png" /></p>
+<h2 id="community-tests">Community Tests</h2>
+<h3 id="exposure-values-with-sc2">exposure values with SC2</h3>
+<p>Key takeaways:</p>
 <ul>
-<li>SC2 only operates at 2.4GHz.  The V and Z1 can also connect at 5GHz</li>
-<li>SC2 can only operation in Access Point (AP) mode.  The V and Z1 can also operate in Client Mode (CL)</li>
+<li>The RICOH API for the SC2 has a few issues. The <code>getMetadata</code> call does not return the correct image exposure data.</li>
+<li>Correct exposure is saved to the file metadata and can be checked with ExifTool</li>
+<li>The RICOH API for the THETA V works fine. The <code>getMetadata</code> call returns the correct image exposure data</li>
 </ul>
-<p>You can use the official RICOH mobile app to check camera features.</p>
-<p><img alt="sc2 settings" src="images/overview/sc2-settings.png" /></p>
-<p>Compare the available SC2 settings in the image above to the THETA V settings in the 
-image below.</p>
-<p><img alt="V settings" src="images/overview/v-settings.png" /></p>
+<p>Using a THETA SC2 (Firmware Version: 01.31), I adjusted the exposure to -0.3EV from the mobile app and took a picture.</p>
+<p><img alt="mobile app settings" src="../images/metadata/mobile-app-settings.png" /></p>
+<p>Ran <a href="https://api.ricoh/docs/theta-web-api-v2.1/commands/camera._get_metadata/">getMetadata</a> using the camera API.</p>
+<p>Code snippet is below.</p>
+<pre><code class="dart">var url ='http://192.168.1.1/osc/commands/execute';
+
+Map data = {
+    'name': 'camera.setOptions',
+    'parameters': {
+      'options': {
+        &quot;exposureCompensation&quot;: 2.0,
+      }
+    }
+  };
+</code></pre>
+
+<p>The API returned an ExposureBialsValue of <code>NULL</code>. Also note that the <code>Model</code> and <code>Software</code> values are missing.</p>
+<p><img alt="metadata api response" src="../images/metadata/metadata-api-response.png" /></p>
+<p>Using <a href="https://exiftool.org/">ExifTool</a> I was able to look at the 
+metadata from the raw image file </p>
+<p>I found that the raw image contained the correct exposure metadata of -0.3.</p>
+<p><img alt="exiftool sc2" src="../images/metadata/exiftool-sc2.png" /></p>
+<p>The takeaway is that the SC2 API has some issues. It does not return the correct image exposure metadata information. However, the correct metadata is stored in the image file. </p>
+<h3 id="exposure-values-with-theta-v">exposure values with THETA V</h3>
+<p>Firmware Version: 3.30.1, <a href="https://api.ricoh/docs/theta-web-api-v2.1/commands/camera._get_metadata/">getMetadata</a></p>
+<p>Initially, the ExposureBiasValue is set to zero.</p>
+<p><img alt="V exposure bias" src="../images/metadata/v-exposure-bias.png" /></p>
+<p>I adjusted the Exposure value to 1.3 from the official mobile app.</p>
+<p><img alt="V mobile setting" src="../images/metadata/v-mobile-setting.png" /></p>
+<p>I used the API to make sure that the value was consistent. Success!</p>
+<p><img alt="V metadata API success" src="../images/metadata/v-metadata-api-success.png" /></p>
+<p>Using the API, I changed the ExposureBiasValue with the API to 2.</p>
+<p><img alt="V API change exposure" src="../images/metadata/v-api-change-exposure.png" /></p>
+<p>I looked at the metadata with the API. ExposureBiasValue = 2. Success!</p>
+<p><img alt="V API get metadata" src="../images/metadata/v-api-get-metadata.png" /></p>
+<h3 id="exposure-values-with-theta-z1">exposure values with THETA Z1</h3>
+<p>I set the exposure compensation to 1.0 using the RICOH API sample
+code for this tutorial.  </p>
+<p><img alt="Z1 API set exposure" src="../images/metadata/z1-api-set-exposure.png" /></p>
+<p>After taking a picture I received the metadata using the RICOH API 
+call <code>getMetadata</code></p>
+<p>The exposure value was 1.0. Success!</p>
+<p><img alt="Z1 API get metdata" src="../images/metadata/z1-api-get-metadata.png" /></p>
                 
               
               
@@ -466,14 +498,28 @@ image below.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
+          <a href="../list-files/" title="List Files" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                List Files
+              </div>
+            </div>
+          </a>
         
-          <a href="basic-commands/" title="Basic Commands" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+        
+          <a href="../livepreview/" title="Livepreview Stream" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Basic Commands
+                Livepreview Stream
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -531,15 +577,15 @@ image below.</p>
       
     </div>
     
-      <script src="assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="assets/javascripts/bundle.4a5ba8d6.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../assets/javascripts/bundle.4a5ba8d6.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
-          base: ".",
+          base: "..",
           features: [],
           search: Object.assign({
-            worker: "assets/javascripts/worker/search.9b3611bd.min.js"
+            worker: "../assets/javascripts/worker/search.9b3611bd.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
