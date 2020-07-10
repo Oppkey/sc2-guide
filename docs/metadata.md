@@ -8,6 +8,8 @@ You can grab the image metadata on your Android mobile phone with
 Most developers grab all the images and process the data on the device. 
 However, if there are hundreds or thousands of images on the camera, you may want to pull some data from images prior to processing.
 
+## Problems with SC2
+
 Unfortunately, [_getMetadata](https://api.ricoh/docs/theta-web-api-v2.1/commands/camera._get_metadata/) does 
 not work correctly on the SC2 as of July 10, 2020.
 You should Run the test yourself for each property you want to use to make sure
@@ -23,7 +25,7 @@ Response
 
 ## Community Tests
 
-### exposure values
+### exposure values with SC2
 
 Key takeaways:
 
@@ -66,3 +68,41 @@ I found that the raw image contained the correct exposure metadata of -0.3.
 
 The takeaway is that the SC2 API has some issues. It does not return the correct image exposure metadata information. However, the correct metadata is stored in the image file. 
 
+### exposure values with THETA V
+
+Firmware Version: 3.30.1, [getMetadata](https://api.ricoh/docs/theta-web-api-v2.1/commands/camera._get_metadata/)
+
+ 
+Initially, the ExposureBiasValue is set to zero.
+
+![V exposure bias](images/metadata/v-exposure-bias.png)
+
+I adjusted the Exposure value to 1.3 from the official mobile app.
+
+![V mobile setting](images/metadata/v-mobile-setting.png)
+
+I used the API to make sure that the value was consistent. Success!
+
+![V metadata API success](images/metadata/v-metadata-api-success.png)
+
+Using the API, I changed the ExposureBiasValue with the API to 2.
+
+![V API change exposure](images/metadata/v-api-change-exposure.png)
+
+I looked at the metadata with the API. ExposureBiasValue = 2. Success!
+
+![V API get metadata](images/metadata/v-api-get-metadata.png)
+
+### exposure values with THETA Z1
+
+I set the exposure compensation to 1.0 using the RICOH API sample
+code for this tutorial.  
+
+![Z1 API set exposure](images/metadata/z1-api-set-exposure.png)
+
+After taking a picture I received the metadata using the RICOH API 
+call `getMetadata`
+
+The exposure value was 1.0. Success!
+
+![Z1 API get metdata](images/metadata/z1-api-get-metadata.png)
