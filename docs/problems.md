@@ -26,7 +26,7 @@ __Problem Description__: When using /osc/command/status with the id from
 
 __Workaround__: Use `/osc/state` and wait for `_captureStatus` to go back to `idle`.
 
-## listFiles does not show thumbnails
+## listFiles does not show thumbnails and freezes SC2
 
 [Problem reported by timbit123](https://community.theta360.guide/t/sc2-listfiles-command-with-thumbnails-not-working/5748?u=craig).
 
@@ -34,9 +34,16 @@ __Problem Description__: `maxThumbSize: 640` does not show the thumbnails.
 The SC2 will freeze. There is no way to get the thumbnails. The
 listFiles command on the SC2 works differently than it does on the V and Z1.
 
-__Workaround__: As of July 10, 2020, we have not identified a workaround yet.
-You can get the original image, but the file is much larger than a thumbnail
-and takes time to transfer.
+__Workaround__: There are a few workarounds to get the base64 encoded 
+thumbnail of approximately 7.3kB in size.  However, as the workaround is not 
+documented and may change, please contact jcasman@oppkey.com and ask for
+the most recent workaround.  As of August 11, 2020, we have thumbnails 
+working with the SC2.
+
+Code sample is available that saves thumbnails to local storage to help with
+testing.
+
+![thumbnail screenshot](images/thumbnail/thumbnail-screenshot.png)
 
 ## camera._getMetadata not working as expected
 

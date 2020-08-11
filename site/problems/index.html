@@ -15,7 +15,7 @@
         <meta name="author" content="Oppkey">
       
       <link rel="shortcut icon" href="../images/logo-white.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.3">
     
     
       
@@ -306,8 +306,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#listfiles-does-not-show-thumbnails" class="md-nav__link">
-    listFiles does not show thumbnails
+  <a href="#listfiles-does-not-show-thumbnails-and-freezes-sc2" class="md-nav__link">
+    listFiles does not show thumbnails and freezes SC2
   </a>
   
 </li>
@@ -380,8 +380,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#listfiles-does-not-show-thumbnails" class="md-nav__link">
-    listFiles does not show thumbnails
+  <a href="#listfiles-does-not-show-thumbnails-and-freezes-sc2" class="md-nav__link">
+    listFiles does not show thumbnails and freezes SC2
   </a>
   
 </li>
@@ -433,14 +433,19 @@ stopping, run camera.getLivePreview again.</p>
 <p><strong>Problem Description</strong>: When using /osc/command/status with the id from
 <code>startCapture</code>, the state is always inProgress.</p>
 <p><strong>Workaround</strong>: Use <code>/osc/state</code> and wait for <code>_captureStatus</code> to go back to <code>idle</code>.</p>
-<h2 id="listfiles-does-not-show-thumbnails">listFiles does not show thumbnails</h2>
+<h2 id="listfiles-does-not-show-thumbnails-and-freezes-sc2">listFiles does not show thumbnails and freezes SC2</h2>
 <p><a href="https://community.theta360.guide/t/sc2-listfiles-command-with-thumbnails-not-working/5748?u=craig">Problem reported by timbit123</a>.</p>
 <p><strong>Problem Description</strong>: <code>maxThumbSize: 640</code> does not show the thumbnails.
 The SC2 will freeze. There is no way to get the thumbnails. The
 listFiles command on the SC2 works differently than it does on the V and Z1.</p>
-<p><strong>Workaround</strong>: As of July 10, 2020, we have not identified a workaround yet.
-You can get the original image, but the file is much larger than a thumbnail
-and takes time to transfer.</p>
+<p><strong>Workaround</strong>: There are a few workarounds to get the base64 encoded 
+thumbnail of approximately 7.3kB in size.  However, as the workaround is not 
+documented and may change, please contact jcasman@oppkey.com and ask for
+the most recent workaround.  As of August 11, 2020, we have thumbnails 
+working with the SC2.</p>
+<p>Code sample is available that saves thumbnails to local storage to help with
+testing.</p>
+<p><img alt="thumbnail screenshot" src="../images/thumbnail/thumbnail-screenshot.png" /></p>
 <h2 id="camera_getmetadata-not-working-as-expected">camera._getMetadata not working as expected</h2>
 <p><strong>Problem Description</strong>: Properties such as ExposureBiasValue
 are incorrect.  </p>
@@ -538,14 +543,14 @@ height, but getLivePreview does appear to work.</p>
     </div>
     
       <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/bundle.4a5ba8d6.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.a68abb33.min.js"
+            worker: "../assets/javascripts/worker/search.9b3611bd.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
