@@ -8,7 +8,7 @@ google_analytics: ['UA-73311422-1', 'auto']
 
 theme:
   name: material
-  custom_dir: 'theme'
+#   custom_dir: 'theme'
   palette:
     primary: 'light green'
     accent: 'lime'
