@@ -21,3 +21,4 @@ https://www2.theta360.guide/doc/article/15
 
 * https://github.com/facelessuser/mkdocs-material-extensions/
 * https://github.com/squidfunk/mkdocs-material/issues/1577
+* GoogleDocs to Markdown https://github.com/mangini/gdocs2md

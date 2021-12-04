@@ -35,4 +35,5 @@ nav:
   - 'Image Metadata': metadata.md
   - 'Livepreview Stream': livepreview.md
   - 'SC2 API Problems': problems.md
+  - 'SC2 Differences': differences.md
   
