@@ -1,12 +1,9 @@
-<!-- Output copied to clipboard! -->
-
-
 
 ## RICOH THETA Development Community Tip Sheet
 
 early access outline
 
-Last updated: December 3, 2021
+Last updated: December 6, 2021
 
 This is a community document based on contributions of informal test results from the theta360.guide independent community. This is not an official RICOH document. For official information, please contact RICOH. You should confirm these community tips with your own tests prior to deployment in a business setting. As these are unofficial tips, the official RICOH THETA API may change unexpectedly and these techniques could stop working.
 

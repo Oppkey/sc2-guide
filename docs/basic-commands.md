@@ -24,6 +24,20 @@ This is a test using Google Chrome.
 Chrome displays colored highlighting in my browser because I am using the free extension 
 [JSON Awesome](https://chrome.google.com/webstore/detail/json-viewer-awesome/iemadiahhbebdklepanmkjenfdebfpfe?hl=en).
 
+This is an example using curl on WSL on Windows 10.
+
+Request
+
+```bash
+curl http://192.168.1.1/osc/info
+```
+
+Response
+
+```json
+{"manufacturer":"RICOH","model":"RICOH THETA SC2","serialNumber":"20001005","firmwareVersion":"01.64","supportUrl":"https://theta360.com/en/support/","gps":false,"gyro":true,"endpoints":{"httpPort":80,"httpUpdatesPort":80},"apiLevel":[2],"api":["/osc/info","/osc/state","/osc/checkForUpdates","/osc/commands/execute","/osc/commands/status"],"uptime":2949,"_wlanMacAddress":"58:38:79:2b:ad:c5","_bluetoothMacAddress":"6c:21:a2:47:d9:05"}
+```
+
 The rest of this tutorial will focus on POST commands.  You will need to use an API testing tool.
 
 ## state

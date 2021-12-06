@@ -13,12 +13,10 @@ Uses MkDocs and Material MkDocs.
     $ mkdocs serve
 ```
 
-## Content Reference
 
-https://www2.theta360.guide/doc/article/15
-
-## References
+## Tool and Technology References
 
 * https://github.com/facelessuser/mkdocs-material-extensions/
 * https://github.com/squidfunk/mkdocs-material/issues/1577
 * GoogleDocs to Markdown https://github.com/mangini/gdocs2md
+* [Oppkey THETA ATK](https://oppkey.github.io/oppkey_theta_atk/)
