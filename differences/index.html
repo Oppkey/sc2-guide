@@ -1,0 +1,935 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Community tests on the RICOH THETA SC2 WiFi API">
+      
+      
+        <meta name="author" content="Oppkey">
+      
+      
+      <link rel="icon" href="../images/logo-white.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.0.3">
+    
+    
+      
+        <title>SC2 Differences - RICOH THETA SC2 API Public Community Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.62128196.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.9204c3b2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#8bc34b">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"..":".."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-green" data-md-color-accent="lime">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ricoh-theta-development-community-tip-sheet" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="RICOH THETA SC2 API Public Community Guide" class="md-header__button md-logo" aria-label="RICOH THETA SC2 API Public Community Guide" data-md-component="logo">
+      
+  <img src="../images/logo-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RICOH THETA SC2 API Public Community Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SC2 Differences
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="RICOH THETA SC2 API Public Community Guide" class="md-nav__button md-logo" aria-label="RICOH THETA SC2 API Public Community Guide" data-md-component="logo">
+      
+  <img src="../images/logo-white.png" alt="logo">
+
+    </a>
+    RICOH THETA SC2 API Public Community Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic-commands/" class="md-nav__link">
+        Basic Commands
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../camera-status/" class="md-nav__link">
+        Camera Status
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../save-image/" class="md-nav__link">
+        Save Image
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list-files/" class="md-nav__link">
+        List Files
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadata/" class="md-nav__link">
+        Image Metadata
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../livepreview/" class="md-nav__link">
+        Livepreview Stream
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../problems/" class="md-nav__link">
+        SC2 API Problems
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SC2 Differences
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        SC2 Differences
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ricoh-theta-development-community-tip-sheet" class="md-nav__link">
+    RICOH THETA Development Community Tip Sheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limited-functionality-on-sc2-and-sc2b" class="md-nav__link">
+    Limited Functionality on SC2 and SC2B
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unsupported-by-sc2-and-sc2b" class="md-nav__link">
+    Unsupported by SC2 and SC2B
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unique-sc2-apis" class="md-nav__link">
+    Unique SC2 APIs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#z1-surprising-behavior" class="md-nav__link">
+    Z1 Surprising Behavior
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-interesting-api-findings" class="md-nav__link">
+    Other Interesting API Findings
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Interesting API Findings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interval-shooting" class="md-nav__link">
+    Interval shooting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysetting" class="md-nav__link">
+    mySetting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-for-camera-to-be-ready" class="md-nav__link">
+    Time For Camera to Be Ready
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-the-api-with-the-oppkey-theta-atk" class="md-nav__link">
+    Testing the API with the Oppkey THETA ATK
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ricoh-theta-development-community-tip-sheet" class="md-nav__link">
+    RICOH THETA Development Community Tip Sheet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limited-functionality-on-sc2-and-sc2b" class="md-nav__link">
+    Limited Functionality on SC2 and SC2B
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unsupported-by-sc2-and-sc2b" class="md-nav__link">
+    Unsupported by SC2 and SC2B
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unique-sc2-apis" class="md-nav__link">
+    Unique SC2 APIs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#z1-surprising-behavior" class="md-nav__link">
+    Z1 Surprising Behavior
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-interesting-api-findings" class="md-nav__link">
+    Other Interesting API Findings
+  </a>
+  
+    <nav class="md-nav" aria-label="Other Interesting API Findings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interval-shooting" class="md-nav__link">
+    Interval shooting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysetting" class="md-nav__link">
+    mySetting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-for-camera-to-be-ready" class="md-nav__link">
+    Time For Camera to Be Ready
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-the-api-with-the-oppkey-theta-atk" class="md-nav__link">
+    Testing the API with the Oppkey THETA ATK
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+  <h1>SC2 Differences</h1>
+
+<h2 id="ricoh-theta-development-community-tip-sheet">RICOH THETA Development Community Tip Sheet</h2>
+<p>early access outline</p>
+<p>Last updated: December 6, 2021</p>
+<p>This is a community document based on contributions of informal test results from the theta360.guide independent community. This is not an official RICOH document. For official information, please contact RICOH. You should confirm these community tips with your own tests prior to deployment in a business setting. As these are unofficial tips, the official RICOH THETA API may change unexpectedly and these techniques could stop working.</p>
+<h2 id="limited-functionality-on-sc2-and-sc2b">Limited Functionality on SC2 and SC2B</h2>
+<table>
+  <tr>
+   <td><strong>Limited API</strong>
+   </td>
+   <td><strong>Explanation</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>commands/status
+   </td>
+   <td>Only works with SC2 for takePicture.  Cannot be used with startCapture.  To see when the interval or bracket shooting is finished when using startCapture, use osc/state and look for _captureState of the SC2
+   </td>
+  </tr>
+  <tr>
+   <td>camera.startCapture
+   </td>
+   <td>SC2 does not support interval composite shooting. Additionally, only the SC2B supports time shift shooting.   You will not be able to use time shift on the standard SC2
+   </td>
+  </tr>
+  <tr>
+   <td>camera.stopCapture
+   </td>
+   <td>when interval shooting captureNumber is set to 0 (unlimited shots in interval shooting), the SC2 will not return the list of files when stopCapture is finished
+   </td>
+  </tr>
+  <tr>
+   <td>camera.listFiles
+   </td>
+   <td>SC2 will not show multiple thumbnails when maxThumbSize is set to 640.  It will only return a single thumbnail.  To get multiple thumbnails, get each thumbnail individually in a loop. You can also use GET to grab the thumbnail of each file as binary data by adding ?type=thumb to the URL  
+   </td>
+  </tr>
+  <tr>
+   <td>camera.delete
+   </td>
+   <td>Prior to firmware 1.42, the SC2 could not delete more than one image or video file when specified as a list.  It also didn’t support the“all” parameter to delete all files. 
+   </td>
+  </tr>
+  <tr>
+   <td>camera._getMetadata
+   </td>
+   <td>does not return correct information.  Workaround is to download the file to your mobile device and then extract the metadata locally after download.
+   </td>
+  </tr>
+  <tr>
+   <td>camera._getMySetting
+   </td>
+   <td>May not be returning correct results on the SC2. Note that the SC2 reverts to MySetting when the Wi-Fi connection is dropped or the camera is restarted or resumed from sleep. See the article below for more information.
+<p>
+<a href="https://docs.google.com/document/d/e/2PACX-1vTPLBqVabuiic4uuSAy-h9PSCZOgtqY7mweDJnS5bXvpJuYwToVxlqpOtbGXfR279tN6nQRN7cqs2xX/pub">https://docs.google.com/document/d/e/2PACX-1vTPLBqVabuiic4uuSAy-h9PSCZOgtqY7mweDJnS5bXvpJuYwToVxlqpOtbGXfR279tN6nQRN7cqs2xX/pub</a>
+   </td>
+  </tr>
+</table>
+
+<h2 id="unsupported-by-sc2-and-sc2b">Unsupported by SC2 and SC2B</h2>
+<table>
+  <tr>
+   <td><strong>Unsupported API</strong>
+   </td>
+   <td><strong>Explanation</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>GET /plugin
+   </td>
+   <td>SC2 does not support plug-ins
+   </td>
+  </tr>
+  <tr>
+   <td>camera._convertVideoFormats
+   </td>
+   <td>SC2 has fixed parameters for video.  Also, it appears that topBottomCorrection may be applied after the file is downloaded versus applying topBottomCorrection inside the camera.
+   </td>
+  </tr>
+  <tr>
+   <td>camera._cancelVideoConvert
+   </td>
+   <td>SC2 cannot perform video conversions
+   </td>
+  </tr>
+  <tr>
+   <td>camera._listAccessPoints
+   </td>
+   <td>SC2 does not support client mode connections and thus cannot connect to external Wi-Fi access points
+   </td>
+  </tr>
+  <tr>
+   <td>camera._setAccessPoint
+   </td>
+   <td>Set access point in client mode.  SC2 only supports access point mode.
+   </td>
+  </tr>
+  <tr>
+   <td>camera._deleteAccessPoint
+   </td>
+   <td>SC2 does not support client mode Wi-Fi and thus cannot save external Wi-Fi access point information inside the camera.
+   </td>
+  </tr>
+  <tr>
+   <td>camera._listPlugins
+   </td>
+   <td>SC2 does not support plug-ins
+   </td>
+  </tr>
+  <tr>
+   <td>camera._setPlugins
+   </td>
+   <td>SC2 does not support plug-ins
+   </td>
+  </tr>
+  <tr>
+   <td>camera._pluginControl
+   </td>
+   <td>SC2 does not support plug-ins
+   </td>
+  </tr>
+  <tr>
+   <td>camera._getPluginLicense
+   </td>
+   <td>SC2 does not support plug-ins
+   </td>
+  </tr>
+  <tr>
+   <td>camera._getPluginOrders
+   </td>
+   <td>SC2 does not support plug-ins
+   </td>
+  </tr>
+  <tr>
+   <td>camera._setPluginOrders
+   </td>
+   <td>SC2 does not support plug-ins
+   </td>
+  </tr>
+  <tr>
+   <td>camera._deleteMySetting
+   </td>
+   <td>does not appear to delete all the settings on the SC2.  Suggest you overwrite the settings in MySetting.  Also, it appears that camera.reset may not reset all the SC2 settings in MySetting.  See the article link in the camera._getMySetting section.
+   </td>
+  </tr>
+  <tr>
+   <td>aperture
+   </td>
+   <td>Only Z1 has an adjustable aperture
+   </td>
+  </tr>
+  <tr>
+   <td>_authentication
+   </td>
+   <td>SC2 does not support client mode and thus cannot disable digest authentication for client mode.
+   </td>
+  </tr>
+  <tr>
+   <td>_bluetoothPower
+   </td>
+   <td>Does not appear to work on the SC2, but you can turn on bluetooth manually with the button on the side of the camera.
+   </td>
+  </tr>
+  <tr>
+   <td>_compositeShootingOutputInterval
+   </td>
+   <td>Only Z1 support interval composite shooting
+   </td>
+  </tr>
+  <tr>
+   <td>_compositeShootingTime
+   </td>
+   <td>Only Z1 support interval composite shooting
+   </td>
+  </tr>
+  <tr>
+   <td>_HDMIreso
+   </td>
+   <td>No HDMI output on Z1.  
+   </td>
+  </tr>
+  <tr>
+   <td>_imageStitching
+   </td>
+   <td>SC2 cannot control image stitching
+   </td>
+  </tr>
+  <tr>
+   <td>_language
+   </td>
+   <td>not supported on SC2.  even on the Z1, it’s not clear what impact this setting has.
+   </td>
+  </tr>
+  <tr>
+   <td>_microphone
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>_microphoneChannel
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>_networkType
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>_password
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>previewFormat
+   </td>
+   <td>width and height not working.  SC2 only has one preview format and one fps.
+   </td>
+  </tr>
+  <tr>
+   <td>_shootingMethod
+   </td>
+   <td>for MySetting
+   </td>
+  </tr>
+  <tr>
+   <td>_topBottomCorrection
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>videoStitching
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>_visibilityReduction
+   </td>
+   <td>reduce size of tripod at bottom of image
+   </td>
+  </tr>
+  <tr>
+   <td>_username
+   </td>
+   <td>name for client mode digest authentication.  SC2 does not support client mode Wi-Fi connections
+   </td>
+  </tr>
+  <tr>
+   <td>_wlanFrequency
+   </td>
+   <td>SC2 only supported 2.4GHz.  Z1 supports 2.4GHz and 5GHz
+   </td>
+  </tr>
+</table>
+
+<h2 id="unique-sc2-apis">Unique SC2 APIs</h2>
+<table>
+  <tr>
+   <td><strong>API</strong>
+   </td>
+   <td><strong>Explanation</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>cameraMode presets
+   </td>
+   <td>SC2 has unique presets for face mode, night view mode, lens-by-lens exposure.  SC2B also has room mode
+   </td>
+  </tr>
+</table>
+
+<h2 id="z1-surprising-behavior">Z1 Surprising Behavior</h2>
+<table>
+  <tr>
+   <td><strong>API</strong>
+   </td>
+   <td><strong>Explanation</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>camera.reset
+   </td>
+   <td>offDelay is set to 64800 (18 hours) on reset.  For the SC2, the offDelay is reset to 600 (10 minutes).
+   </td>
+  </tr>
+</table>
+
+<h2 id="other-interesting-api-findings">Other Interesting API Findings</h2>
+<h3 id="interval-shooting">Interval shooting</h3>
+<ul>
+<li>SC2, minimum value is 8</li>
+<li>V, minimum value is 4</li>
+<li>Z1, minimum value is 6 for JPEG</li>
+<li>10 for RAW+</li>
+</ul>
+<h3 id="mysetting">mySetting</h3>
+<p>THETA Z1 and SC2 can save shooting conditions set with a smartphone or the API. Shooting conditions registered in My Settings can be enabled by the end user by pressing and holding the Function (Fn) button on the THETA. The advantage is that you can save your shooting conditions and use them even while not connected to a smartphone.</p>
+<ul>
+<li>Both Z1 and SC2 mySetting settings survive reboot and sleep</li>
+<li>There is no My Settings icon on the SC2 (in fact, no OLED at all). Therefore, there is no way for the end user to change the settings without the mobile app.</li>
+<li>If you run camera.reset, the Z1 will give an error for the getMySetting command. This is expected behavior, since mySetting has no settings. However, using camera.reset with an SC2 will not reset the settings.</li>
+</ul>
+<h3 id="time-for-camera-to-be-ready">Time For Camera to Be Ready</h3>
+<p>The SC2 has a slower processor than the Z1.  The Sc2 takes approximately 8,181 milliseconds to be ready for the next picture versus 2,922 milliseconds for the Z1.  This is based on polling the camera status every 100ms.  So, if you poll it more frequently, you will get more accurate results.</p>
+<p>The amount of time taken for the picture also varies with light conditions.  If the image is darker, it will leave the shutter open longer.</p>
+<h2 id="testing-the-api-with-the-oppkey-theta-atk">Testing the API with the Oppkey THETA ATK</h2>
+<p>A free tester is available to help you test the RICOH THETA API.</p>
+<p><strong><a href="https://oppkey.github.io/oppkey_theta_atk/">Get Oppkey THETA ATK Now</a></strong></p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../problems/" class="md-footer__link md-footer__link--prev" aria-label="Previous: SC2 API Problems" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              SC2 API Problems
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/theta360developers" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/theta360dev" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.facebook.com/theta360guide/" target="_blank" rel="noopener" title="www.facebook.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.01824240.min.js"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e0abf5b0.min.js"></script>
+      
+    
+  </body>
+</html>
