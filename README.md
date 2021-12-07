@@ -1,5 +1,7 @@
 # SC2 API Public Community Guide
 
+[https://oppkey.github.io/sc2-guide/](https://oppkey.github.io/sc2-guide/)
+
 Uses MkDocs and Material MkDocs.  
 
 ## Installation
