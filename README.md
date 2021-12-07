@@ -1,6 +1,6 @@
-# SC2 API Public Community Guide
+# RICOH THETA API Community Guide
 
-[https://oppkey.github.io/sc2-guide/](https://oppkey.github.io/sc2-guide/)
+[https://oppkey.github.io/theta-api-guide/](https://oppkey.github.io/theta-api-guide/)
 
 Uses MkDocs and Material MkDocs.  
 

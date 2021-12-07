@@ -1,13 +1,39 @@
-# RICOH THETA SC2 API
+# RICOH THETA API
 
-Build Android iOS mobile apps for the SC2 and connect 
-your mobile app to the camera with Wi-Fi using this API.
+Build Android iOS mobile apps for the RICOH THETA cameras.
+Connect 
+your mobile app to the camera with Wi-Fi.
 
 ![header](images/overview/sc2_cover.png)
 
 ## Overview
 
-The RICOH THETA SC2 is a great, lightweight camera that takes good-looking 360° pictures. Many people in the developer community have asked about building applications for the SC2. Although the SC2 camera appears to conform to the RICOH THETA Wi-Fi API, it is not listed on 
+As of December 6, 2021, there are two RICOH THETA camera models in production, the
+[RICOH THETA Z1 51GB](https://theta360.com/en/about/theta/z1.html), available for $1050, and the
+[RICOH THETA SC2](https://theta360.com/en/about/theta/sc2.html), available for $300.
+
+The older Z1 (without the 51GB designation) is identical to the 51GB model except for the storage capacity.  Both
+Z1 versions use the same firmware.
+
+The [RICOH THETA SC2 Business Edition](https://us.ricoh-imaging.com/product/theta-sc2-b2b/) is almost the same as the SC2.  It has these differences:
+
+* firmware numbering is different
+* SC2B has ROOM preset mode with a room icon on the OLED.  ROOM preset appears
+to be identical to HDR on the SC2.  However, there is no icon on the SC2 OLED to
+indicate that the camera is in HDR mode and no easy way to toggle between
+HDR and non-HDR modes.  The SC2B can change presets with a button on the camera.
+* serial number scheme is different
+* SC2B comes only in a business grey.  SC2 does not come in business grey.
+* SC2B has time shift mode which can be used to eliminate the photographer from the
+picture.  There is no way to duplicate this function on the SC2.  You will need to
+use Photoshop or equivalent to merge two separate pictures manually or use your
+own software.
+
+The Z1 is a better camera and should be used for business applications.
+However, as the price difference may impact business models, some developers
+are using the SC2 in business applications. 
+
+The RICOH THETA SC2 is a great, lightweight consumer camera that takes good-looking 360° pictures. Many people in the developer community have asked about building applications for the SC2. Although the SC2 camera appears to conform to the RICOH THETA Wi-Fi API, it is not listed on 
 [the official RICOH API site](https://api.ricoh/docs/theta-web-api-v2.1/) which we all use as our reference. Some developers have [reported problems](https://community.theta360.guide/t/question-about-getlivepreview-by-thetasc2-on-android/5117) with the SC2 and the 
 [RICOH THETA SDK](https://www2.theta360.guide/doc/article/3) for features such as live preview.
 
@@ -33,9 +59,14 @@ Dart was chosen for many tests as it almost as easy to use as Bash or Python for
 
 Several of the tests are in the [Oppkey THETA API Test Kit (ATK)](https://oppkey.github.io/oppkey_theta_atk/).
 
-## Connect Your Computer to the SC2
+## Connect Your Computer to the RICOH THETA
 
-Turn the SC2 on and put it into Wi-Fi mode.
+Turn the RICOH THETA on and put it into Wi-Fi AP mode.  
+The SC2 can only function in AP mode. Although the Z1 can connect
+in Client Mode, this document focuses on AP mode.  To use
+Client Mode, you should use digest authentication. See 
+the [community discussion for more information on developing
+client mode applications](https://community.theta360.guide/t/tip-developing-theta-client-mode-applications/2450?u=craig). 
 
 ![Wi-Fi OLED](images/overview/wifi-oled.png)
 
@@ -51,7 +82,7 @@ Once connected, the Wi-Fi icon on the front of the SC2 will be solid. If the Wi-
 
 ## Troubleshooting Connection
 
-The THETA SC2 Wi-Fi only functions at 2.4GHz. The THETA V and the Z1 operate at both 2.4GHz and 5GHz. If you have an unstable Wi-Fi connection with the SC, try a different Wi-Fi dongle or laptop to isolate the problem.
+The THETA SC2 Wi-Fi only functions at 2.4GHz. The THETA V and the Z1 operate at both 2.4GHz and 5GHz. If you have an unstable Wi-Fi connection with the SC2, try a different Wi-Fi dongle or laptop to isolate the problem.
 
 If you are working with multiple devices, make sure you are connecting to the correct camera.  
 
